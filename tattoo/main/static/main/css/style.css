@@ -1,0 +1,245 @@
+.bodyContent {
+    background: #dedbdb;
+}
+#header_line{
+    background: #222222;
+    height: 47px;
+    border-bottom: solid #3d3d3d 1px ;
+    padding-top: 10px;
+
+}
+.header_bottom{
+    background: #2d2d2d;
+    height: 208px;
+    box-shadow: 0 0 20px black;
+
+}
+#date {
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px black;
+    font-family: "Droid Sans Fallback";
+    font-size:20px;
+    text-align: center;
+}
+.log_in{
+    position: absolute;
+    right: 100px;
+    top:10px;
+    font-size: 16px;
+    border-right: 1px solid #474747;
+    padding-right: 10px;
+    color:#bebebe;
+}
+.regist{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 16px;
+    color:#bebebe;
+}
+.log_in:hover, .regist:hover {
+    text-decoration: none;
+    color: #777777;
+}
+.logo{
+    width: 400px;
+    height: 100px;
+    margin-left:20px ;
+    padding-top: 10px;
+
+
+}
+.logo h1{
+    font-size: 50px;
+    font-family: AlfaSlabOne-Regular, monospace;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    color: aliceblue;
+
+}
+.logo h1:hover, .navigation a:hover, .header_line p:hover{
+    text-shadow: 0.1em 0.1em 0.2em #bebebe;
+}
+
+.logo a:hover{
+    text-decoration: none;
+}
+
+.logo_img{
+    background: url("../images/logo.jpg")no-repeat;
+    position: absolute;
+    left: 80px;
+    top: 130px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 0 20px black;
+
+}
+.logo_img:hover{
+    box-shadow: 0 0 20px #bebebe;
+}
+
+.tattoo_photo {
+
+    width:auto;
+    height: auto;
+    margin-top: -100px;
+    margin-left: 700px;
+
+}
+.tattoo_photo img{
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+.tattoo_photo1{
+    width: 100px;
+    height: 100px;
+    background: url("../images/photo_tatto1.jpg")no-repeat;
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-left: 230px;
+
+}
+.tattoo_photo2{
+    width: 100px;
+    height: 100px;
+    background: url("../images/photo_tatto2.jpg")no-repeat;
+    border-radius: 100px;
+    margin-left: 350px;
+    margin-top: -100px;
+}
+.tattoo_photo3{
+    width: 100px;
+    height: 100px;
+    background: url("../images/photo_tatto3.jpg")no-repeat;
+    border-radius: 100px;
+    margin-left: 470px;
+    margin-top: -100px;
+}
+.tattoo_photo1, .tattoo_photo2, .tattoo_photo3{
+    box-shadow: 0 0 20px black;
+
+}
+.tattoo_photo img:hover{
+    box-shadow: 0 0 20px #bebebe;
+}
+.navigation{
+    position: absolute;
+    left: 16%;
+    top:190px;
+
+}
+.navigationText {
+    font-size: 30px;
+    font-family: AlfaSlabOne-Regular, serif ;
+}
+.navigation h2 {
+    font-family: FREEBSCA, serif;
+    text-shadow: 1px 1px 1px black  ;
+}
+.fa {
+    margin-top: 6px;
+}
+/*.navTextLi{*/
+    /*margin-left: 30px;*/
+/*}*/
+.navTextLi a {
+    margin-right: 20px;
+}
+
+.contentContainer{
+    background: whitesmoke;
+    width: 1110px;
+    margin-left: 17% ;
+    border-radius: 4px;
+    box-shadow: 0 0 20px black;
+    padding: 30px;
+}
+.underNavLine {
+    box-shadow: 0 0 10px black;
+    border-radius: 2px;
+    height: 15px;
+    width: 1110px;
+    margin-top: -10px;
+    margin-left: 17%;
+    background: #373737;
+}
+.articleBox{
+    /*font-family: Arial;*/
+    margin-top: 30px;
+}
+.articleBox h3 {
+    font-family: FREEBSCA;
+    font-size: 30px;
+    /*color: #5e5e5e;*/
+}
+.mySlider {
+    box-shadow: 0 0 30px black;
+
+}
+.my_footer_under_line{
+    height: 15px;
+    background: #373737 ;
+    box-shadow: 20px 20px 20px black;
+    width: 1110px;
+    border-radius: 2px;
+    margin-left: 17%;
+
+}
+.my_footer{
+    height: 120px;
+    background: #2d2d2d;
+    box-shadow: 0 0 20px black;
+}
+
+
+.my_footer_content_bottom{
+    width: 1110px;
+    margin-left: 17%;
+    background: whitesmoke;
+    height: 40px;
+    box-shadow: 0 0 10px black;
+    border-radius: 0 0 3px 3px;
+}
+.masters_box p{
+    font-size: 15px;
+}
+.masters_box h4{
+    text-align: center;
+    font-family: FREEBSCA;
+    font-size: 40px;
+}
+.masters_box h5 {
+    font-family:AlfaSlabOne-Regular;
+    font-size: 25px;
+}
+#link_works{
+    text-align: center;
+    text-decoration: none;
+}
+.masters_box a:hover{
+    text-decoration: none;
+}
+.search_box{
+    margin-bottom: 20px ;
+    margin-left: 360px;
+}
+#search_icon_mast {
+    margin-right: 3px;
+}
+
+.info_for_search_bock{
+    box-shadow: 0 0 20px black;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+#my_icon_search:hover{
+    cursor: pointer;
+    color: #0f0f0f;
+}
+#my_icon_search{
+    position: relative;
+    top: -2px;
+}
