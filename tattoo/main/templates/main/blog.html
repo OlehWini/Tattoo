@@ -35,8 +35,15 @@
         </script>
       </p>
 
-      <a class="log_in" href="/home/">Log in</a>
-      <a class="regist" href="/home/">Register</a>
+    <div class="user_tool" >
+          <ul>
+              {% if username %}
+                  <li><a href="/logout/">Sing out ({{ username }})</a></li>
+              {% else %}
+                  <li><a href="/auth/login/">Sing in</a></li>
+              {% endif %}
+          </ul>
+    </div>
 
   </div>
     <div class="header_bottom">
@@ -104,20 +111,30 @@
                 </div>
             </div>
     <div class="underNavLine"></div>
-    <div class="contentContainer ">
-        <p>Lofwfewfwfwfewf</p>
-        <p>Lofwfewfwfwfewf</p>
-        <p>Lofwfewfwfwfewf</p>
-        <p>Lofwfewfwfwfewf</p>
-        <p>Lofwfewfwfwfewf</p>
-        <p>Lofwfewfwfwfewf</p>
-        <p>Lofwfewfwfwfewf</p>
+        <div class="contentContainer ">
+
+            <div class="topic_box">
+                {% if topics %}
+                    {% for topic in  topics %}
+                        <p>{{ topic.topic_header_text }}</p>
+                        <p>{{ topic.topic_count_of_records }}</p>
+                        <a href="/topic_{{ topic.id  }}/">More</a>
+                {% endfor %}
+                {% endif %}
+
+            </div>
+
+        </div>
     </div>
 
+    <div class="my_footer_under_line" ></div>
 
+    <div class="my_footer">
+        <div class="my_footer_content_bottom">
 
+        </div>
+    </div>
 
-   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>#}

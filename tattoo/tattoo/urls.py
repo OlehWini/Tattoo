@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'', include('main.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^auth/', include('loginsys.urls')),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -35,8 +35,18 @@
         </script>
       </p>
 
-      <a class="log_in" href="/login/">Log in</a>
-      <a class="regist" href="/registration/">Register</a>
+{#      <a class="log_in" href="/login/">Log in</a>#}
+{#      <a class="regist" href="/registration/">Register</a>#}
+
+      <div class="user_tool" >
+          <ul>
+              {% if username %}
+                  <li><a href="/auth/logout/">Sing out ({{ username }})</a></li>
+              {% else %}
+                  <li><a href="/auth/login/">Sing in</a></li>
+              {% endif %}
+          </ul>
+      </div>
 
   </div>
     <div class="header_bottom">
@@ -62,9 +72,9 @@
 
                 <div class="container navigation">
                 <div class="row col-lg-12 ">
-                    <div class="navbar navbar-inverse">
-                        <div class="container">
-                            <div class="navbar-header ">
+                    <div class="navbar navbar-inverse " >
+                        <div class="container ">
+                            <div class="navbar-header  ">
                                 <a class="navbar-brand"  href="#"><h2 style=" margin-top: -5px ">The Tattooed Ukraine</h2></a>
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
                                   <span class="sr-only">Open menu</span>

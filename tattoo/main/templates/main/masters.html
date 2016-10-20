@@ -35,8 +35,15 @@
         </script>
       </p>
 
-      <a class="log_in" href="/home/">Log in</a>
-      <a class="regist" href="/home/">Register</a>
+     <div class="user_tool" >
+          <ul>
+              {% if username %}
+                  <li><a href="/logout/">Sing out ({{ username }})</a></li>
+              {% else %}
+                  <li><a href="/auth/login/">Sing in</a></li>
+              {% endif %}
+          </ul>
+      </div>
 
   </div>
     <div class="header_bottom">
@@ -124,7 +131,7 @@
             </small>
         </div>
         <div class="search_box  ">
-            <form action="{% url 'main:searching' %}" method="POST"  target="_blank">
+            <form action="{% url 'searching' %}" method="POST"  target="_blank">
              {% csrf_token %}
             <div class="row ">
               <div class="col-lg-6 ">

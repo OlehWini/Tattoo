@@ -2,9 +2,12 @@ from __future__ import unicode_literals
 from django.utils import timezone
 # import datetime
 from django.db import models
-
-
+from django.views.generic.edit import FormView
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 # Create your models here.
+
+
 
 
 class Article(models.Model):
@@ -32,17 +35,26 @@ class Master(models.Model):
         return self.name
 
 
+
+
 class Topic(models.Model):
-    header_text = models.CharField(max_length=100)
-    count_of_records = models.IntegerField(default=0)
-    pub_date = models.DateTimeField('date published')
+    topic_header_text = models.CharField(max_length=100)
+    topic_count_of_records = models.IntegerField(default=0)
+    topic_pub_date = models.DateTimeField('date published', default=timezone.now)
 
     def __str__(self):
-        return self.header_text
+        return self.topic_header_text
 
 
-class Record(models.Model):
+
+
+
+class Comments(models.Model):
+    username =models.ForeignKey(User,on_delete=models.CASCADE)
+    comments_text_of_comment= models.TextField()
+    comments_pub_date = models.DateTimeField('date published', default=timezone.now)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    text_of_record = models.TextField()
-    pub_date = models.DateTimeField('date published')
-    
+
+
+    def __str__(self):
+        return self.topic.topic_header_text

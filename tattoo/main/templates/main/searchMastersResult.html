@@ -35,8 +35,15 @@
         </script>
       </p>
 
-      <a class="log_in" href="/home/">Log in</a>
-      <a class="regist" href="/home/">Register</a>
+     <div class="user_tool" >
+          <ul>
+              {% if username %}
+                  <li><a href="/logout/">Sing out ({{ username }})</a></li>
+              {% else %}
+                  <li><a href="/auth/login/">Sing in</a></li>
+              {% endif %}
+          </ul>
+      </div>
 
   </div>
     <div class="header_bottom">
