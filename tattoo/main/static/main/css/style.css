@@ -325,10 +325,312 @@
     width: 600px;
     margin-left: 20px;
     margin-top: 20px;
+    padding: 20px 20px 0 20px;
+    box-shadow: 0 0 10px black;
+}
+.comment_box h3{
+    margin-top: 0px;
 }
 .my_comment_form{
     margin: 20px;
 }
 .my_comment_form button{
     margin-top: 10px;
+}
+#comment_author{
+}
+#date_of_pub_comment {
+    float: left;
+    margin-left: 320px;
+    margin-right: 10px;
+}
+#com_date{
+    padding-top: 4px;
+    color: #3d3d3d;
+}
+.author_comments {
+    border-bottom: 1px solid #bebebe;
+
+}
+.com_text {
+    padding: 10px;
+}
+.com_text p {
+    color: #676;
+}
+.topic_in_blog_page{
+    border: 1px solid #bebebe;
+    margin-bottom: 30px;
+    padding: 15px;
+    box-shadow: 0 0 15px black;
+
+}
+#name_of_topic_blog_page  {
+    font-family: AlfaSlabOne-Regular, Arial;
+    font-size: 27px;
+}
+#name_of_topic_blog_page{
+    margin-left: 10px;
+
+}
+#pub_date_of_topic_blog_page{
+    position: absolute;
+    right: 300px;
+
+}
+.count_of_comments_for_topics_blog_page{
+    margin-top: 30px;
+}
+.topic_in_blog_page a{
+    float: right;
+    margin-top:-30px;
+    margin-right: 25px;
+
+}
+.topic_in_blog_page a:hover{
+    text-decoration: none;
+}
+#lbl_for_date, #lbl_for_name{
+    color: #777777;
+}
+#lbl_for_name{
+    font-family: Arial;
+}
+.category{
+    width: 200px;
+    float: right;
+    margin-right: 10px;
+    background: #373737;
+    box-shadow: 0 0 20px black;
+    border-radius: 3px;
+    padding-bottom: 20px;
+}
+.category h1{
+    font-family: AlfaSlabOne-Regular, Arial, serif;
+    text-align: center;
+    color: #bebebe;
+    text-shadow: 0px 0px 20px black;
+}
+.category li:hover {
+    border-left: 6px solid #5e5e5e;
+}
+.category a{
+    color: #bebebe;
+
+}
+.category a:hover{
+    color: #272727;
+}
+.specifications{
+    width: 200px;
+    background: #373737;
+    box-shadow: 0 0 20px black;
+    border-radius: 3px;
+    padding-bottom: 20px;
+    position: absolute;
+    right: 0px;
+    top: 800px;
+    height: 300px;
+
+}
+.specifications h1{
+    font-family: AlfaSlabOne-Regular, Arial, serif;
+    color: #bebebe;
+    text-align: center;
+    text-shadow: 0px 0px 20px black;
+
+}
+.specifications a:hover{
+    text-decoration: none;
+}
+#tattoo_logo_sh1{
+    margin-left:-190px;
+}
+
+.mySlider2{
+    float: right;
+    margin-right: 170px;
+}
+#tattoo_logo_sh2{
+    float: right;
+    margin-right: -20px;
+    margin-top: -150px;
+}
+.t_logo_sh{
+    margin-top: 30px;
+    margin-left: -190px;
+}
+
+.sh_info{
+    width: 580px;
+    position: relative;
+    left: 260px;
+    top:10px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 20px black;
+}
+#tattoo_logo_sh{
+    float: right;
+}
+.sh_info h1 {
+    font-family: AlfaSlabOne-Regular, Arial;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.sh_info p{
+    font-size: 15px;
+}
+.products{
+    margin-top: 40px;
+    margin-left: -170px;
+    padding: 10px;
+    box-shadow: 0 0 20px black;
+    border-radius: 3px;
+}
+.products h1{
+    font-size: 50px;
+    font-family: AlfaSlabOne-Regular, Arial;
+    border-bottom: 1px solid #bebebe;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.product_box h4{
+
+}
+#link_for_order{
+    float: right;
+    margin-top: -35px;
+    margin-right: 10px;
+    font-size: larger;
+}
+#link_for_order:hover{
+    text-decoration: none;
+}
+.product_box_prod_page{
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    background: whitesmoke;
+    border-radius: 3px;
+}
+.product_box_prod_page img{
+    border-radius: 3px;
+    box-shadow: 0 0 20px black;
+
+
+}
+.caption_prod{
+    float: right;
+    margin-top: -350px;
+    margin-right:50px;
+}
+.caption_prod h1{
+    font-size: 31px;
+    border-bottom: 1px solid #777777 ;
+
+}
+.caption_prod h3{
+    font-size: 30px;
+}
+#categ_prod{
+    margin-top: 40px;
+}
+#categ_prod b{
+    font-family: AlfaSlabOne-Regular, Arial;
+    font-size: 30px;
+}
+#categ_prod a{
+    color: #3c3c3c;
+}
+#categ_prod a:hover{
+    text-decoration: none;
+}
+.my-tabs{
+    position: relative;
+    left: 540px;
+    top: -50px;
+}
+.connt{
+    height: 10px;
+    margin-top: -150px;
+}
+.my_tab p{
+    padding: 10px;
+}
+
+.my_modal{
+    padding: 20px;
+    background: whitesmoke;
+    margin-top: 250px;
+    border-radius: 3px;
+    box-shadow: 0 0 20px black;
+}
+.my_modal h4{
+    text-align: center;
+    font-family: AlfaSlabOne-Regular, Arial, serif;
+    font-size: 35px;
+}
+.my_modal p{
+    font-size: 20px;
+}
+.my_ww a{
+    color: #373737;
+}
+
+#btn_in_modal{
+   float: right;
+
+}
+
+.box_img{
+    box-shadow: 0 0 20px black;
+    width: 500px;
+    /*margin: 20px;*/
+}
+.vkGroup_info{
+
+    box-shadow: 0 0 20px black;
+    height: 320px;
+    width: 240px;
+    padding: 20px;
+    background: white;
+    margin-right: 50px;
+    /*margin-left: 390px;*/
+    color: #5e5e5e;
+    margin-bottom: 20px;
+}
+.page-header h1{
+
+}
+.page-header a{
+    margin-left: 10px;
+    color: #777777;
+}
+
+.page-header a:hover{
+    text-decoration: none;
+    color: #3c3c3c;
+}
+
+.vkGroup_info img {
+    margin-bottom: 10px;
+}
+.vk_post_box{
+    box-shadow: 0 0 20px black;
+    width: 520px;
+    padding: 10px;
+    border: 1px solid #bebebe;
+    /*margin-left: 120px;*/
+}
+#sm_ava{
+    margin-bottom: 15px;
+}
+.ww{
+    background: white;
+}
+#name_in_post{
+    float: right;
+    margin-top: 10px;
+    margin-right: 220px;
+    font-size: 13px;
 }

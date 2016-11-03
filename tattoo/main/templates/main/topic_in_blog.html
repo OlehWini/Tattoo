@@ -122,6 +122,7 @@
                         <label>Topic:</label>
                         {{ topic.topic_header_text }}
                    </h3>
+
                     <p>
                         <label id="date_of_pub">
                             <i class="fa fa-clock-o"></i>
@@ -131,23 +132,36 @@
                     </p>
                </div>
                 <div class="comments_box_for_topic">
-                    <h3 id="label_comments">Record`s:</h3>
+                    <h3 id="label_comments" >
+                        Record`s:<p style="float: right; margin-right: 650px; margin-top: -25px">{{ topic.topic_count_of_records }}</p>
+                    </h3>
 
                     {% if comments %}
                             {% for comment in comments %}
                                 <div class="comment_box">
-                                    <h3>{{ comment.username }}</h3>
-                                    <p>{{ comment.comments_text_of_comment }}</p>
+                                    <div class="author_comments">
+                                        <h3 id="comment_author"><i class="fa fa-pencil small"></i> {{ comment.user.username }}</h3>
+                                    </div>
+                                    <div class="com_text">
+                                        <p>{{ comment.comments_text_of_comment }}</p>
+                                    </div>
+                                    <label id="date_of_pub_comment">
+                                        <i class="fa fa-clock-o"></i>
+                                        Date of publication:
+                                    </label>
+                                    <p id="com_date">{{ comment.comments_pub_date.day }}.{{ comment.comments_pub_date.month }}.{{ comment.comments_pub_date.year }}</p>
                                 </div>
                             {% endfor %}
                     {% endif %}
 
-                    <form action=""  class="my_comment_form" method="POST">
-                        {% csrf_token %}
-                        <textarea cols="40" rows="3"  placeholder="Add record here..." name="fCommentText" style="font-size: larger"></textarea>
-                        <br>
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-pencil"></i> Add</button>
-                    </form>
+                    {% if username  %}
+                        <form action="topic_block_page"  class="my_comment_form" method="POST">
+                            {% csrf_token %}
+                            <textarea cols="40" rows="3"  placeholder="Add record here..." name="fCommentText" style="font-size: larger"></textarea>
+                            <br>
+                            <button class="btn btn-primary" type="submit"><i class="fa fa-pencil"></i> Add record</button>
+                        </form>
+                    {% endif %}
                 </div>
             </div>
 

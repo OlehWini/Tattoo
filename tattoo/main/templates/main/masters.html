@@ -151,9 +151,11 @@
         <div class="tab-pane active in fade" id="tab-1">
         <div class="row">
             {% for master in masters %}
-                <div class="col-xs-6 col-sm-4 masters_box">
+                <div class="col-xs-6 col-sm-3 masters_box">
                     <div style="box-shadow: 0 0 20px black;" class="thumbnail ">
-                        <img src="{{ master.his_photo.url }}" class="img-responsive"/>
+                        <div class="ff" style="size: 200px 200px; margin: 15px">
+                            <img src="{{ master.his_photo.url }}" class="img-responsive" />
+                        </div>
                         <div class="caption">
                             <h4>{{ master.name }}  {{ master.sur_name }}</h4>
                             <h5><b>About him:</b> </h5>

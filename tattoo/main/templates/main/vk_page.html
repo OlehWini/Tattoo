@@ -35,8 +35,15 @@
         </script>
       </p>
 
-      <a class="log_in" href="/login/">Log in</a>
-      <a class="regist" href="/registration/">Register</a>
+    <div class="user_tool" >
+          <ul>
+              {% if username %}
+                  <li><a href="/logout/">Sing out ({{ username }})</a></li>
+              {% else %}
+                  <li><a href="/auth/login/">Sing in</a></li>
+              {% endif %}
+          </ul>
+    </div>
 
   </div>
     <div class="header_bottom">
@@ -77,10 +84,10 @@
                             <ul class="nav navbar-nav navTextLi">
                                 <li style="margin-left: 30px" class="fa fa-home"></li>
                                 <li class="navTextLi"><a href="/home/">Main</a></li>
-                                <li class="fa fa-commenting"></li>
-                                <li><a href="/blog/">Blog</a></li>
                                 <li class="fa fa-user"></li>
                                 <li><a href="/masters/">Masters</a></li>
+                                <li class="fa fa-commenting"></li>
+                                <li><a href="/blog/">Blog</a></li>
                                 <li class="fa fa-shopping-bag"></li>
                                 <li><a href="/shop/">Shop</a></li>
                                 <li class="fa fa-gears"></li>
@@ -104,17 +111,45 @@
                 </div>
             </div>
     <div class="underNavLine"></div>
-    <div class="contentContainer ">
-        <form>
+        <div class="contentContainer ww">
+            {{ info }}
+            <div class="page-header">
+                <h1>{{ group_name }}</h1>
+                <a href="https://vk.com/{{group_description  }}">https://vk.com/{{group_description}}</a>
+            </div>
+            <div class="vkGroup_info">
+                <div class="vk_group_avatar">
+                    <p  style="text-align: center">{{ group_name }}</p>
+                    <img src="{{ group_avatar }}" alt="">
+                    <p style="text-align: center"><b>Followers:</b> {{ users_count }}</p>
+                </div>
+            </div>
+
+            
+                {% for src in src_img_arr  %}
+                        <div class="vk_post_box">
+                            <p id="name_in_post"><b>{{ group_name }}</b></p>
+                            <img id="sm_ava" src="{{ group_avatar_small }}" alt="">
+                            <div class="box_img">
+                                <img src="{{ src }}" alt="" width="500px">
+                            </div>
+
+                        </div>
+                        <br>
+                {% endfor %}
 
 
-        </form>
+        </div>
     </div>
 
+    <div class="my_footer_under_line" ></div>
 
+    <div class="my_footer">
+        <div class="my_footer_content_bottom">
 
+        </div>
+    </div>
 
-   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>#}

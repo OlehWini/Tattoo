@@ -5,7 +5,11 @@ from django.db import models
 from django.views.generic.edit import FormView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib import auth
+from django.contrib.auth.models import BaseUserManager, AbstractUser
+
 # Create your models here.
+
 
 
 
@@ -49,8 +53,34 @@ class Topic(models.Model):
 
 
 
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    def __str__(self):
+        return self.name
+
+
+class Product(models.Model):
+    name_of_product = models.CharField(max_length=100)
+    sale = models.BooleanField()
+    price = models.FloatField ()
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    is_in_stock = models.BooleanField()
+    photo = models.FileField(null=True, blank=True)
+    info=models.TextField()
+
+
+    def __str__(self):
+        return self.name_of_product
+# class Cart(models.Model):
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+#
+
+# class MyUser(AbstractUser):
+#     photo=models.FileField(null=True, blank=True)
+#     # cart=models.ForeignKey(Cart, on_delete=models.CASCADE)
 class Comments(models.Model):
-    username =models.ForeignKey(User,on_delete=models.CASCADE)
+    user =models.ForeignKey(User,on_delete=models.CASCADE)
     comments_text_of_comment= models.TextField()
     comments_pub_date = models.DateTimeField('date published', default=timezone.now)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
@@ -58,3 +88,13 @@ class Comments(models.Model):
 
     def __str__(self):
         return self.topic.topic_header_text
+
+class Order(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # validators = r'((\+380)?(\d+){9})|(\d+){9}'
+    mobil_number=models.CharField(max_length=10, null=True)
+    # mobil_number=models.CharField(validators=r'((\+380)?(\d+){9})|(\d+){9}', null=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+        # order_date=models.DateTimeField('date ordered', default=timezone.now)
+    def __str__(self):
+        return 'User: {0}\n Product: {1}'.format(self.user.username, self.product.name_of_product)

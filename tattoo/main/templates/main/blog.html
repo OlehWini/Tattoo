@@ -116,9 +116,30 @@
             <div class="topic_box">
                 {% if topics %}
                     {% for topic in  topics %}
-                        <p>{{ topic.topic_header_text }}</p>
-                        <p>{{ topic.topic_count_of_records }}</p>
-                        <a href="/topic_{{ topic.id  }}/">More</a>
+
+                        <div class="topic_in_blog_page">
+                            <lable id="lbl_for_name" style="float: left">Name of Topic:</lable> <p id="name_of_topic_blog_page" style="float: left"    > {{ topic.topic_header_text }}</p>
+                            <lable id="lbl_for_date" style=" position: absolute; right:380px ">
+                                Date of publication:
+                            </lable>
+                            <p id="pub_date_of_topic_blog_page">
+                                {{ topic.topic_pub_date.day }}.{{ topic.topic_pub_date.month }}.{{ topic.topic_pub_date.year }}
+                            </p>
+                            <br>
+                            <div class="count_of_comments_for_topics_blog_page">
+                                <lable style="float: left; color: #777777; margin-right: 5px">
+                                    Count of comments to this topic:
+                                </lable>
+                                <h5 style="padding-top: 2px;">
+                                    {{ topic.topic_count_of_records }}
+                                </h5>
+                            </div>
+
+
+
+                            <a href="/topic_{{ topic.id  }}/"><i class="fa fa-arrow-right"></i> Go to this Topic...</a>
+                        </div>
+
                 {% endfor %}
                 {% endif %}
 
